@@ -1,6 +1,11 @@
-// A primeira coisa a fazer na criação de um componente é importar o React, que esta na pasta node_modules
-import React from 'react';
+// A primeira coisa a fazer na criação de um componente é importar o React, que esta na pasta node_modules e do dat-fns para formatação de datas. Inciamos fazendo os imports relativos aos requisitos do sistema para a aplicação
 
+import React from 'react';
+import { formatRelative } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+
+//-----------------------------imports da aplicação --------------------------    
+// Imports relacionados com nossa aplicação
 // Para usarmos o .css precisamos antes de mais nada importar o arquivo de configuração desejado
 
 import './Comentario.css';
@@ -8,6 +13,7 @@ import './Comentario.css';
 // Importando uma imagem
 
 import imagemUsuario from './user.png';
+
 
 // Um componente basicamente é uma função em Javascript
 // Note que nesta função o valor de retorno é um código HTML. O ato de inserir HTML dentro do Javascript recebe o nome de JSX
@@ -31,7 +37,7 @@ const Comentario = props => {
                     <h2 class="nome">{props.nome}:</h2>
                     <h3 class="email">{props.email}</h3>
                     <p class="mensagem">{props.children}</p>
-                    <p class="data">{props.data.toString()}</p>
+                    <p class="data">{formatRelative(props.data, new Date(), { locale: ptBR })}</p>
                     <button onClick={props.onRemove}>&times;</button>
                 </div>
             </div>
