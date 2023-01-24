@@ -5,6 +5,10 @@ import React from 'react';
 
 import './Comentario.css';
 
+// Importando uma imagem
+
+import imagemUsuario from './user.png';
+
 // Um componente basicamente é uma função em Javascript
 // Note que nesta função o valor de retorno é um código HTML. O ato de inserir HTML dentro do Javascript recebe o nome de JSX
 
@@ -14,13 +18,22 @@ import './Comentario.css';
 // Preciso passar as propriedades para meu componente poder exibir a proposta. As propriedades são passadas na forma de parâmetros para a função utilizada para definir meu componente. Note que estamos usando props como parâmetros, assim, tudo o que for string pode ser passado para props (que é um objeto) --> fique atento aos componentes Javascript e às children das <div>
 
 const Comentario = props => {
+    // Foi apenas um teste para elaborar melhor um estilo
+    // const estilo = {
+        // color: 'red',
+        // padding: '10px',
+        // fontSize: '30px'   
+    //}
     return (
             <div className="Comentario"> 
-                <h2>{props.nome}:</h2>
-                <h3>{props.email}</h3>
-                <p>{props.children}</p>
-                <p>{props.data.toString()}</p>
-                <button onClick={props.onRemove}>&times;</button>
+                <img class="avatar" src={imagemUsuario} alt={props.nome}/>
+                <div class="conteudo">
+                    <h2 class="nome">{props.nome}:</h2>
+                    <h3 class="email">{props.email}</h3>
+                    <p class="mensagem">{props.children}</p>
+                    <p class="data">{props.data.toString()}</p>
+                    <button onClick={props.onRemove}>&times;</button>
+                </div>
             </div>
             ) 
 };

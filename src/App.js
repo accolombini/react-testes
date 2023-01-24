@@ -106,7 +106,7 @@ digitacao = evento => {
           </Comentario>
         ))} 
        {/*} <button onClick={this.adicionarComentario}>Adicionar um comentário</button> */}
-       <form method='post' onSubmit={this.adicionarComentario}>
+       <form method="post" onSubmit={this.adicionarComentario} className="Novo-Comentario">
         <h2>Adiconar Comentário</h2>
         <div>
           <input 
@@ -114,6 +114,7 @@ digitacao = evento => {
             name="nome" 
             value={this.state.novoComentario.nome}
             onChange={this.digitacao}
+            required
             placeholder='Digite seu nome'/>
         </div>
         <div>
@@ -122,6 +123,7 @@ digitacao = evento => {
             name="email" 
             value={this.state.novoComentario.email}
             onChange={this.digitacao}
+            required
             placeholder='Digite seu email'/>
         </div>
         <div>
@@ -129,6 +131,7 @@ digitacao = evento => {
             name="mensagem" 
             value={this.state.novoComentario.mensagem}
             onChange={this.digitacao}
+            required
             rows="4" />
         </div>
         <button type="submit">Adicionar Comentario</button>
