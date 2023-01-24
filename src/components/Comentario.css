@@ -1,0 +1,7 @@
+/* Criando um css para melhor apresentar nosso Comentarío --> vamos criar uma classe comentário */
+
+.Comentario {
+   background-color: #eee; 
+   margin-bottom: 2rem;
+   border: 1px solid #555;
+}

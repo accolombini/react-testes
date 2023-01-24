@@ -1,0 +1,56 @@
+Para criar um novo projeto no React use o seguinte comando
+No terminal, na pasta desejada digite
+
+npx create-react-app <nome_projeto>
+
+Exemplo criando um projeto com o nome recat-basico:
+npx create-react-app react-basico
+
+A seguir crie seu repositório GitHub - lembre de não inserir o arquivo README.md
+
+Faça a integração entre seu repositório local e o repositório remoto - siga as instruções do GitHub
+
+No seu repositório faça seu primeiro comite e realize um push. A partir daí ....
+
+O proximo passo é entrar na pasta criada para o projeto - no caso react-basico
+Na pasta do projeto digite o comando a seguir que executará o servidor e abrirá seu navegador http://localhost:3000(default):
+
+npm start
+
+Deverá receber uma mensagem com essa:
+
+Compiled successfully!
+
+You can now view react-basico in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.145:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+
+Para encerrar a execução basta pressionar <CTRL + C>
+
+No diretório public da pasta do projeto há um arquivo index.html com uma div
+
+ <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+<div id="root"></div>  --> é nesta div que toda aplicação estará rodando
+
+É nesta div que será desenvolvido o projeto
+
+O arquivo manifest.json é um arquivo de configuração
+
+O arquivo robots.txt é um arquivo de configuração de motores de busca
+
+Por fim na pasta src -> é onde temos o código da aplicação. Aqui será o foco do trabalho no desenvolvimento de um projeto.
+
+Especificamente falando no App.js será o ponto de partida para o desenvolvimento do projeto.
+
+Na raiz do projeto temos o .gitignore e dois package o package-lock.jason não mexer neste arquivo e o package.json trabalhe aqui suas configurações. Este é o arquivo de dependências do projeto, todo pacote adicionado deverá ser referenciado aqui.
+
+Tem-se um arquivo README.md que deve ser atualizado na medida em que sua aplicação for ganhando corpo.
+Atenção ao trabalhar com múltiplas máquinas, ficar atento aos commits. Manter GitHub atualizado.
