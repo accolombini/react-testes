@@ -66,7 +66,7 @@ adicionarComentario = evento => {
   const novoComentario = { ...this.state.novoComentario, data: new Date() }
   this.setState({
     comentarios: [ ...this.state.comentarios, novoComentario ], 
-    novoComentario: { nome: ' ', email: ' ', mensagem: ' ' }
+    novoComentario: { nome: '', email: '', mensagem: '' }
   })
 }
 
