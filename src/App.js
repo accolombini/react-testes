@@ -70,6 +70,14 @@ adicionarComentario = evento => {
   })
 }
 
+// Queremos agora remover comentários --> observe como é simples
+
+removerComentario = comentario => {
+  let lista = this.state.comentarios;
+  lista = lista.filter( c => c !== comentario );
+  this.setState({ comentarios: lista });
+}
+
 // Preparando para a função onChange. Note que ao usar [name] podemos trabalhar agtribuindo nome ou email para a variável nome
 
 digitacao = evento => {
@@ -92,7 +100,8 @@ digitacao = evento => {
             key={indice}
             nome={comentario.nome} 
             email={comentario.email}
-            data={comentario.data}>
+            data={comentario.data}
+            onRemove={this.removerComentario.bind(this, comentario)}>
             {comentario.mensagem}
           </Comentario>
         ))} 
